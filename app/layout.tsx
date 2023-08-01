@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 
@@ -13,8 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body className="relative">
+        <Navbar className="hidden md:block" />
+        {children}
+        <Navbar className=" md:hidden" />
+      </body>
     </html>
   );
 }
