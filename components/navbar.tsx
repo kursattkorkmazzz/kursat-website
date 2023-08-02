@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { Home, Newspaper, LayoutList } from "lucide-react";
+import { Home, PersonStanding } from "lucide-react";
 import { Link } from "react-scroll";
 
 import { combineRecursive } from "@/utils/cn";
@@ -13,14 +12,9 @@ const routes = [
     icon: Home,
   },
   {
-    text: "Blogs",
-    href: "blogs",
-    icon: Newspaper,
-  },
-  {
-    text: "Skills",
-    href: "skills",
-    icon: LayoutList,
+    text: "Biography",
+    href: "biography",
+    icon: PersonStanding,
   },
 ];
 
@@ -36,7 +30,7 @@ export default ({ className }: { className?: string }): React.ReactNode => {
       bgColor: "",
     },
     light: {
-      bgColor: "bg-slate-100  md:bg-transparent",
+      bgColor: "bg-slate-100  md:bg-black",
     },
   };
 
@@ -58,6 +52,7 @@ export default ({ className }: { className?: string }): React.ReactNode => {
               className="flex flex-1 flex-col items-center p-2 rounded  select-none cursor-pointer"
               spy
               smooth
+              delay={0}
               activeClass="text-primary"
             >
               <c.icon strokeWidth="1" />

@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="relative">
+      <body className="font-montserrat bg-slate-100 text-sm">
         <Navbar className="hidden md:block" />
         {children}
         <Navbar className=" md:hidden" />

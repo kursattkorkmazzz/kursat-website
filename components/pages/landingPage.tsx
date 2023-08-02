@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Avatar from "@/components/ui/avatar";
 import { ChevronDown } from "lucide-react";
-import { AnimationSequence, useAnimate } from "framer-motion";
+import { useAnimate } from "framer-motion";
 
 import bgImage from "@/public/background.jpg";
 import { useEffect } from "react";
@@ -37,7 +37,7 @@ export default function LandingPage() {
         <Avatar />
       </div>
 
-      <Link to="about-me" className="p-1 select-none cursor-pointer">
+      <Link to="biography" delay={0} className="p-1 select-none cursor-pointer">
         <ChevronDown ref={scope} className="z-[1]" />
       </Link>
     </section>

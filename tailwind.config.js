@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: "class",
   content: [
@@ -7,9 +8,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#ff5d56",
-      },
+      colors: { primary: "#ff5d56" },
       height: {
         header: "50px",
       },
