@@ -38,7 +38,7 @@ export default function BiographyPage() {
   return (
     <section
       id="biography"
-      className="flex flex-col  min-h-screen gap-5 items-center  py-20 px-5 md:px-[20%]"
+      className="flex flex-col gap-5  min-h-screen  items-center"
       onMouseMove={(e) => {
         setControlSize({
           width: document.getElementById("biography")!.scrollWidth,
@@ -77,7 +77,7 @@ export default function BiographyPage() {
         {Person.biography}
       </p>
       <br />
-      <div className="flex flex-col items-center md:flex-row w-full md:justify-center md:items-start md:gap-10">
+      <div className="flex flex-col items-center justify-center  lg:flex-row w-full  lg:items-start md:gap-10">
         <Image
           ref={scope}
           src={avatarIMG}
@@ -95,14 +95,24 @@ export default function BiographyPage() {
         <br />
         <div className="flex flex-col gap-10 items-center">
           <InfoTable />
-          <Link href={Person.cv}>
-            <motion.div
-              className="text-center w-fit bg-primary text-white py-3 px-5 cursor-pointer select-none rounded"
-              whileHover={{ scale: 1.1, opacity: 0.8 }}
-            >
-              Download CV
-            </motion.div>
-          </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <Link href={Person.cv}>
+              <motion.div
+                className="text-center w-fit bg-primary text-white py-3 px-5 cursor-pointer select-none rounded w-full"
+                whileHover={{ scale: 1.1, opacity: 0.8 }}
+              >
+                Download CV
+              </motion.div>
+            </Link>
+            <Link href={Person.cv}>
+              <motion.div
+                className="text-center w-fit bg-primary text-white py-3 px-5 cursor-pointer select-none rounded w-full"
+                whileHover={{ scale: 1.1, opacity: 0.8 }}
+              >
+                Download Transcript
+              </motion.div>
+            </Link>
+          </div>
         </div>
       </div>
     </section>

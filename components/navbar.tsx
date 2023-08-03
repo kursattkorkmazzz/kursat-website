@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, PersonStanding } from "lucide-react";
+import { Home, PersonStanding, Code2 } from "lucide-react";
 import { Link } from "react-scroll";
 
 import { combineRecursive } from "@/utils/cn";
@@ -15,6 +15,11 @@ const routes = [
     text: "Biography",
     href: "biography",
     icon: PersonStanding,
+  },
+  {
+    text: "Skills",
+    href: "skills",
+    icon: Code2,
   },
 ];
 

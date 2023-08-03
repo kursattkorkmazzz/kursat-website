@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Avatar from "@/components/ui/avatar";
 import { ChevronDown } from "lucide-react";
+
 import { useAnimate } from "framer-motion";
 
 import bgImage from "@/public/background.jpg";
